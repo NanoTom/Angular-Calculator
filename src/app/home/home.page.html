@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Calculator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">calculator</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<!-- This numbers -->
+  <ion-toolbar>
+    <ion-label class="big-bold-text">{{ans}}</ion-label>
+
+    <ion-grid>
+      <ion-row><ion-label>First value: {{x1}}</ion-label></ion-row>
+      <ion-row><ion-label>Second value: {{x2}}</ion-label></ion-row>
+      <ion-row><ion-button (click)="assign(1)" >1</ion-button> <ion-button (click)="assign(2)">2</ion-button> <ion-button (click)="assign(3)">3</ion-button> <ion-button (click)="opps(1)">X</ion-button></ion-row>
+      <ion-row><ion-button (click)="assign(4)">4</ion-button> <ion-button (click)="assign(5)">5</ion-button> <ion-button (click)="assign(6)">6</ion-button>  <ion-button (click)="opps(2)">/</ion-button></ion-row>
+      <ion-row><ion-button (click)="assign(7)">7</ion-button> <ion-button (click)="assign(8)">8</ion-button> <ion-button (click)="assign(9)">9</ion-button> <ion-button (click)="opps(3)">-</ion-button></ion-row>
+      <ion-row><ion-button (click)="assign(0)">0</ion-button> <ion-button (click)="floater()"> . </ion-button> <ion-button (click) = "oppsapply()">=</ion-button> <ion-button (click)="opps(4)">+</ion-button> <ion-button (click)="clear()">ClC</ion-button></ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+
+</ion-content>
